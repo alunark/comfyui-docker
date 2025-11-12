@@ -2,8 +2,12 @@ FROM nvidia/cuda:13.0.2-cudnn-runtime-ubuntu24.04
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
-    git wget curl python3 python3-pip libgl1 libglib2.0-0 \
+    git wget curl python3 python3-venv python3-pip libgl1 libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
+
+# Using Pythron Virtual environment
+RUN python3 -m venv .venv
+RUN source .venv/bin/activate
 
 # Create working directory
 WORKDIR /app
