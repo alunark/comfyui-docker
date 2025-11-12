@@ -6,8 +6,9 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Using Pythron Virtual environment
+ENV VIRTUAL_ENV=.venv
 RUN python3 -m venv .venv
-RUN /bin/bash -c "source .venv/bin/activate"
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # Create working directory
 WORKDIR /app
