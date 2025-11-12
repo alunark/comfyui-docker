@@ -6,8 +6,8 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Using Pythron Virtual environment
-ENV VIRTUAL_ENV=.venv
-RUN python3 -m venv .venv
+ENV VIRTUAL_ENV=venv
+RUN python3 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # Create working directory
