@@ -12,4 +12,5 @@ comfy:
     unet: models/unet/
     diffusers: models/diffusers/
     style_models: models/style_models/
+    diffusion_models: models/diffusion_models/
     gligen: models/gligen/
