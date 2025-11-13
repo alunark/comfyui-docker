@@ -1,4 +1,4 @@
-FROM nvidia/cuda:13.0.2-cudnn-runtime-ubuntu24.04
+FROM nvidia/cuda:12.9.1-cudnn-runtime-ubuntu24.04
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
