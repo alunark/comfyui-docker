@@ -24,11 +24,14 @@ RUN git clone https://github.com/comfyanonymous/ComfyUI.git /app/ComfyUI
 # Change working directory
 WORKDIR /app/ComfyUI
 
-# Install ComfyUI dependecies
+# Install ComfyUI dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Clean up pip cache to reduce image size
 RUN pip cache purge
+
+# Copy file configuration
+COPY extra_model_paths.yaml .
 
 # Return to root app directory
 WORKDIR /app

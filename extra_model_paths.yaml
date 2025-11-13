@@ -1,0 +1,15 @@
+comfy:
+    base_path: /workspace/comfyUI
+    loras: models/loras/
+    checkpoints: models/checkpoints/
+    vae: models/vae/
+    controlnet: models/controlnet/
+    embeddings: models/embeddings/
+    upscale_models: models/upscale_models/
+    configs: configs/
+    clip: models/clip/
+    clip_vision: models/clip_vision/
+    unet: models/unet/
+    diffusers: models/diffusers/
+    style_models: models/style_models/
+    gligen: models/gligen/
