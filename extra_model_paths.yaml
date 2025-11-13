@@ -14,3 +14,9 @@ comfy:
     style_models: models/style_models/
     diffusion_models: models/diffusion_models/
     gligen: models/gligen/
+    text_encoders: models/text_encoders/
+    hypernetworks: models/hypernetworks/
+    photomaker: models/photomaker/
+    classifiers: models/classifiers/
+    model_patches: models/model_patches/
+    audio_encoders: models/audio_encoders/
