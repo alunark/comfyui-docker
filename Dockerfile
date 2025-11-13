@@ -1,4 +1,4 @@
-FROM nvidia/cuda:13.0.0-cudnn-runtime-ubuntu24.04
+FROM nvidia/cuda:12.1.1-cudnn8-runtime-ubuntu22.04
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y python3-pip
 WORKDIR /app
 
 # Install PyTorch with CUDA support
-RUN pip install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130
+RUN pip install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
 # Clone ComfyUI and install its requirements
 RUN git clone https://github.com/comfyanonymous/ComfyUI.git /app/ComfyUI
